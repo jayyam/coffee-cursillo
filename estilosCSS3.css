@@ -1,0 +1,207 @@
+@charset "UTF-8";
+
+body /*Estilo para modificaciones en el cuerpo de la pagina*/
+	{
+		text-align: center;/*alinea todo el contenido del texto de body*/
+		width: 960px;
+		margin: auto;/*alinea al centro de la pantalla*/
+		color:#ffffff;
+	}
+	
+#principal /*selector ID que modifica el bloque con el nombre "principal" en origen.html */
+	{
+		display: block;
+		width: 884px;
+		margin: 50px auto;
+		padding: 15px;
+		text-align: center;
+		border: 1px solid #4d2612;
+		-moz-border-radius: 20px 0px 20px 0px;/*solo aplicable para navegador modzilla firefox*/
+		-webkit-border-radius: 20px 0px 20px 0px;/*para navegadores chrome y safari*/
+		border-radius: 20px 0px 20px 0px;/*aplica una curvatura en las esquinas de la caja para mas belleza*/
+		box-shadow: 4px 4px 5px rgba(169,108,53,0.5);/*crea sombra en elementos. los 2 primeros valores desplazamiento horizontal/vertical. tercer valor= difuminacon. cuarto valor= color RedGreenBlueAlfa. Alfa indica transparencia*/
+		background: -webkit-linear-gradient(top, #a96c35, #4d2612);/*efecto degradador del color. uno de los efecto novedosos mas atractivos de CSS3. Se configuran como fondos*/
+        background: -moz-linear-gradient(top, #a96c35, #4d2612);
+	}
+	
+#titulo /*selector ID que modifica el texto con el nombre "titulo" en origen.html */
+	{	
+		font: bold 36px MiNuevaFuente, verdana, sans-serif;/*si no se carga la fuente declarada, se cargara verdana o sanserif*/  
+		text-shadow: 3px 3px 5px rgba(0,0,0,0.5);/*crea sombra en textos. igual que boxshadow pero con texto*/
+	}	
+@font-face/*propiedad que incorpora una fuente especifica*/
+	{
+		font-family: 'MiNuevaFuente';/*declara la fuente que quiero incorporar*/
+        src: url('/home/osantana/workspace/html5curso/WebContent/fuentes/ASimpleLife.ttf');/*url de donde se ubica la fuente a usar*/
+	}	
+	
+.izquierdo /*estilo de la clase izquierdo declarada en la caja en origen.html*/
+	{
+		display: block;
+		float:left;
+		width: 400px;
+		margin: 20px;
+		padding: 15px;
+		text-align: center;
+		border: 1px solid #4d2612;
+		-moz-border-radius: 20px 0px 20px 0px;
+		-webkit-border-radius: 20px 0px 20px 0px;
+		border-radius: 20px 0px 20px 0px;
+		-moz-box-shadow: 4px 4px 5px rgba(169,108,53,0.5);
+		-webkit-box-shadow: 4px 4px 5px rgba(169,108,53,0.5);
+		box-shadow: 4px 4px 5px rgba(169,108,53,0.5);
+		background: -webkit-linear-gradient(top, #a96c35, #4d2612);
+		background: -moz-linear-gradient(top, #a96c35, #4d2612);
+	}
+	
+.derecho /*estilo de la clase derecho declarada en la caja en origen.html*/
+	{
+        display: block;
+        float: left;
+        width: 400px;
+        margin: 20px 20px 20px 30px;
+        padding: 15px;
+        text-align: center;
+        border: 1px solid #4d2612;
+        -moz-border-radius: 0px 20px 0px 20px;/*se diferencia de izquierdo en la direccion de las curvas*/
+        -webkit-border-radius: 0px 20px 0px 20px;/*se diferencia de izquierdo en la direccion de las curvas*/
+        border-radius: 0px 20px 0px 20px;/*se diferencia de izquierdo en la direccion de las curvas*/
+        -moz-box-shadow: 4px 4px 5px rgba(169,108,53,0.5);
+        -webkit-box-shadow: 4px 4px 5px rgba(169,108,53,0.5);
+        box-shadow: 4px 4px 5px rgba(169,108,53,0.5);
+        background: -webkit-linear-gradient(top, #a96c35, #4d2612);
+        background: -moz-linear-gradient(top, #a96c35, #4d2612);
+	}
+
+/* Selector descendente */
+
+table td /*estilo para cada una de las celdas de la tabla*/
+	{
+		border: 1px solid #d17434;   
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background-color:#000;
+        color:#ffffff;
+	    text-align:center;
+	    height:44px;
+	}
+/* Selector  descendente */
+
+td a/*aplicando estilo a hipervinculos de las celdas*/
+	{
+		text-decoration:none;/*quita decoracion*/
+        color:#ec4012; /*rojo*/
+	}
+/* Hijo  directo */
+
+td > a/*estilo que solo modifica uno de los hipervinculos por que entre los demas hay etiqueta <span> y no son hijos directos*/
+	{
+		font-weight: bold;/*negrita*/
+        color:#19a40f;	/*verde*/  
+	}
+/* Adyacentes */
+
+td + td/*este Estilo afecta a celdas que estan a continuacion hacia la derecha de la celda original*/
+	{
+		background-color: #4d2612;	
+	}	
+	
+/* Elementos referenciados por atributo */
+
+td[name="ascenso"]/*solo modifica las celdas tipo td con el valor especificado "ascenso"*/
+	{
+		background-color:#ec4012;/*rojo*/
+		font-weight:bold;
+	}
+	
+td[name="descenso"]/*solo modifica las celdas tipo td con el valor especificado "descenso"*/
+	{
+		background-color:#19a40f;/*verde*/
+		font-weight:bold;
+	}
+
+/* inicio del menu CSS3 */
+
+nav 
+	{
+		margin: 50px 50px;
+	}
+
+nav ul 
+	{ 
+        list-style: none;  
+        text-align: center; 
+        padding:0; 
+	}
+	
+nav ul li/*estilo de etiqueta del menu a nivel "li" cada elemento de la lista */
+	{ 
+		display: block;/*propiedad dsplay en modo bloque establece cajita para cada elemento*/
+		float: left;/*agrupa todos los elementos de la lista a la izquierda*/
+		padding: 6px 10px;
+		margin-bottom: 4px;
+		margin-top: 4px;
+		margin-right: 8px;
+		border-top: 1px solid #984a0b;
+		border-bottom: 3px solid #984a0b;
+	}
+	
+nav ul li a /*estilo de etiqueta del menu a nivel "a" que modifica el estilo de los hipervinculos*/
+	{ 
+		text-decoration: none;/*elimina decoracion del vinculo*/
+		font-family: Arial;
+		font-weight: bold;
+		text-transform: uppercase;/*transforma en mayusculas todo el texto de la lista*/
+		color: #984a0b;
+		padding: 4px;
+	}
+	
+nav ul li:hover, nav ul li a:hover/*pseudoclase que hace que se produzca un efecto al pasar el raton por cada elemento*/
+	{
+		color: #f0d4b0;
+		background: #984a0b;
+	}
+	
+/* fin del menu */	
+
+section/*modificado para ajustar el ancho y margenes*/
+	{
+		width: 960px;
+		margin: 0 px 0px;
+		float:left;
+	}
+
+/* efectos sobre imagenes en la galeria */
+
+.imagengaleria/*añadiendo clase aplicada a las imagenes galeria añadidas en codigo. las ajusta*/
+	{
+		width:200px;
+	    float:left;
+	    margin: 10px;
+	}
+.imagengaleria:hover/*creamos pseudoclase que creara los efectos que se produciran al pasar el raton por cada imagen. Hay que establecer un tiempo para que los efectos de la imagen no se produzcan a la vez y solo se vea el ultimo efecto*/
+	{
+		/*-moz-transform: scale(3);/*efecto que aunmenta 300% la imagen al pasar el raton*/
+       	/*-webkit-transform: scale(3);/*tambien se puede esfecificar scaleX o scaleY para hacerlo en funcion de un eje querido*/		
+		/*-moz-transform: rotate(10deg);hace que rote la imagen los grados especificados. angulo positivo=manecillas del reloj*/
+        /*-webkit-transform: rotate(10deg);*/
+        /*-moz-transform: translateX(100px)translateY(100px);/*Desplaza la imagen los pixeles especificados. punto de partida=esquina superior izqda*/
+        /*-webkit-transform: translateX(100px)translateY(100px);*/
+        /* -moz-transform: translateX(120px) translateY(120px) scaleX(3.0) scaley(3.0);*/
+        /* -webkit-transform: translateX(120px) translateY(120px) scaleX(3.0);*/
+        /* transform: skew para un efecto de distorsion*/	
+		   transform: translate(120px) scale(3);
+		/* transition: transform 1s ease-in-out 0.5s;*/
+		  -moz-transition: -moz-transform 1s ease-in-out 0.5s;/*instruccion para intentar que los efectos no sean inmediatos entre si, y, por tanto, visibles*/
+          -webkit-transition: -webkit-transform 1s ease-in-out 0.5s;/*posee 4 parametros: nombre de la transformacion, duracion, formula elegida de bezier y retardo*/       
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	

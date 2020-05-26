@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Prueba JavaScript</title>
+		<script>
+			//Confirmación para acceder a una página
+			function confirmar_edad() 
+				{
+		    		return confirm("Esta página es solo para mayores de 18 años. ¿Es usted mayor de edad")//no recibe parametros sino que devuelve (return) la funcion "confirm" que muestra una ventana con 2 botones "ACEPTAR (true) o CANCELAR (false)"
+				}
+		</script>
+	</head>
+	<body>
+		<a href="http://www.marcaapuestas.es" onclick="return confirmar_edad()"> Acceder </a><!-- onclick Llama a la funcion "confirmar edad" del script. ademas anteponiendole la funcion return, aseguramos que cuando se pulse ACEPTAR (true) se permita acceso a la pagina pero si se pulsa CANCELAR (false) no se permita -->
+	</body>
+</html>

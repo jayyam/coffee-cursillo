@@ -1,0 +1,73 @@
+<!DOCTYPE html> <!-- define el tipo de documento -->
+<html lang="es"> <!-- Raiz del documento + Atributo lenguaje tomando valor "español" -->
+	<head> <!-- Inicio cabecera.Parte invisible:Titulo,Javascript,set de caracteres,informacion general,archivos externos -->
+		<meta charset="UTF-8"> <!-- etiqueta que especifica como el texto se mostrara en pantalla -->
+		<meta name="description" content="Cafés Eusebio, distribuidores desde 1950, los mejores cafés de Murcia">
+		<meta name="keywords" content="Café, Café en Murcia, Distribuidores de café">
+		<title>Cafés Eusebio</title> <!-- Titulo del documento -->
+		<link rel="stylesheet" type="text/css" href="styles/estilos.css"> <!-- Etiqueta que enlaza hoja de estilo css externa ademas de elementos javascript -->
+	</head> <!-- Fin de la cabecera -->
+	<body> <!-- Inicio cuerpo.Parte visible. Solo hay un body por pagina -->
+		<header> <!-- Comienzo de parte visible -->
+      		<h1>Cafés Eusebio</h1>
+      		<h2>Distribuidores de café desde el año 1950 </h2>
+      		<p> Posiblemente el mejor café de Murcia </p> <!-- texto en formato parrafo -->
+		</header>
+		<nav> <!-- Define menu de la pagina -->
+      		<ul> <!-- crea una lista, para que sea una lista ordenada se usa <ol> -->
+        		<li><a href="index.html"Alt="Cafés Eusebio" Title="Cafés Eusebio">Inicio</a></li> <!-- define un elemento en la lista -->
+        		<li><a href="productos.html"Alt="Productos" Title="Productos">Productos</a></li>
+        		<li><a href="fichaproducto.html" Alt="Ficha del Producto" Title="Ficha del Producto">Ficha</a></li>
+        		<li><a href="noticias.html" Alt="Noticias" Title="Noticias">Noticias</a></li>
+        		<li><a href="origen.html" Alt="Origen" Title="Origen">Origen</a></li>
+        		<li><a href="galeria.html" Alt="Galería" Title="Galería">Galeria</a></li>
+        		<li><a href="#">Contacto</a></li>
+      		</ul>
+		</nav>
+		<section> <!-- Parte informacion principal derecha de la pagina. Section se divide en articles -->
+			<article> <!-- Subseccion. Elementos en los que se divide la parte pincipal -->
+				<header> <!-- convierte esta subseccion en un elemento independiente dentro de section -->
+					<hgroup>
+						<h1>Tostado Artesanal</h1> <!-- elementos del header. van de h1 a h6 de mayor a menor -->
+						<h2>Con los estándares de calidad</h2>
+					</hgroup>
+				</header>
+				Cada uno de nuestros productos se fabrica individualmente, en lotes de pequeñas cantidades, vigilando en detalle el grado e intensidad,  tiempos y temperaturas variables del tueste de cada lote, su reposo apropiado, etc.
+				<figure> <!-- añadiendo imagen/contenido descriptivo pero independiente -->
+              		<img src="imagenes/granos.png">
+              		<figcaption> <!-- añadiendo comentario para contenido descriptivo -->
+                		El auténtico café de Colombia
+              		</figcaption>
+        		</figure>
+				<footer> <!-- cierra el elemento independiente -->
+					<p>comentarios (0)</p>
+				</footer>  
+			</article>		
+			<article>
+            	<header>
+	      			<h1>Lo que nos diferencia</h1>
+	    		</header>
+	    			<div class="minimarco"> <!-- div es una Etiqueta que convierte en caja el texto -->
+	    				<p>El <mark>aroma</mark> nos diferencia</p> <!-- texto resaltado -->
+	    				<p>Somos <em>cafeteros</em> de familia</p> <!-- marca con enfasis palabras importantes -->
+	    				<p>El <strong>origen del producto</strong> marca la diferencia</p> <!-- negrita -->
+	    				<p><small>Derechos Reservados &copy; 2018</small></p> <!-- tamaño minimo de fuente de texto -->
+	    				<p>En aquella época <cite>Juan Valdez</cite> ya nos abastecía de café</p> <!-- texto para referenciar -->
+	    				<p>Desde el <time>14/05/1950</time> llevamos café a toda Murcia</p> <!-- para textos de fecha y hora -->
+	    				<p>Nuestras instalaciones se encuentran en:<address>C/Juan Blanco, 8</address>muy cerca de el Corte Inglés</p> <!-- texto para direcciones -->
+	    			</div>
+	    	</article>	  	  
+			<article>
+	    		Los granos en verde se depositan dentro de un tostador de aire caliente el cual puede ser calentado de 180 a 240 grados y con duraciones que van desde los 8 hasta los 25 minutos, dependiendo del grado de tueste que se quiera alcanzar.
+			</article> 
+		</section>
+		<aside> <!-- informacion secundaria. Si desaparece la pagina aun tiene sentido -->
+	  		<!-- blockquote se emplea para crear citas en modo de bloque,compuestas por un párrafo -->
+      		<blockquote>La Federación de Cafeteros y  la marca Juan Valdez, reciben el premio Colombia-España en la categoría empresarial, distinción que otorga la embajada de ese país en Colombia</blockquote>
+      		<blockquote>La FNC es una organización única en su género. A través de su historia ha demostrado una capacidad de gestión, transparencia y profesionalismo reconocida por sus propios empleados</blockquote>
+		</aside>
+		<footer> <!-- Pie de pagina, informacion al final del documento -->
+	  	Derechos Reservados &copy; 2018-2028 <!-- Se añade elemento html llamado copy -->
+		</footer>    
+	</body> <!-- cierre del cuerpo/parte visible -->
+</html> <!-- Cierra el documento -->

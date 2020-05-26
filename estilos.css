@@ -1,0 +1,209 @@
+@charset "UTF-8";
+
+* /*Estilo que define el Selector universal que asigna unos margenes superior e inferior de 0 pixeles para que queden pegados a la parte superior de la pantalla. con auto los margenes laterales quedan centrados horizontalmente*/
+	{
+		margin: 0 auto;
+	}
+	
+body/*Estilo que define las modificaciones que solo se aplican al cuerpo de los archivos html*/
+	{
+		font-family: Cambria, Arial, Times;/*Asignacion de tipo de letra con orden en funcion de si existe en el ordenador*/
+		font-size: 12pt;/*tamaño de fuente en puntos*/
+		width: 800px;/*margen para asignar el contenido del cuerpo centradamente. sirve para pantallas de mayor resolucion*/
+	}
+	
+header/*Estilo que define las modificaciones solo se aplican a la cabecera de todos los archivos html*/
+	{
+     	width: 802px;
+        background-color:#512504;/*Asigna color de fondo al header*/
+        color:#f6b971; /*asigna color a los textos en header*/
+        padding: 4px;
+        margin-bottom: 4px;
+    }
+    
+article header/*Estilo que define el Selector descendente que modifica las anchuras de todas las cabeceras*/
+	{
+	    width: 542px;
+	}
+	
+section
+	{
+		width: 550px;
+		margin-right: 20px;
+	    float:left;/*convierte todas las secciones en flotantes*/
+	}
+
+section article/*Estilo que define el Selector descendente que modifica los articles de todas las secciones*/
+	{
+            width: 550px; 
+	        border: 1px solid #984a0b;
+	        margin-bottom: 4px;
+	        margin-top: 4px;
+	        background-color:#f0d4b0;
+	        padding : 4px;
+	        float:left;
+	}
+	
+section article div.minimarco /*Estilo que define selector class que define las propiedades de la class "minimarco" defnidas en index.html*/
+	{
+			background-color:#eeeeee;
+			border: 1px solid #512504;
+			color: #512504;
+	        padding: 4px;	
+    }
+    	 
+aside 
+	{
+		width: 230px;
+		float:left;
+	}
+
+aside blockquote
+	{
+		border: 1px solid #984a0b;
+		margin-bottom: 10px;
+		margin-top: 4px;
+		background-color:#f0d4b0;
+		padding : 4px;
+	}  
+
+footer/*estilo para toda seccion footer*/
+	{
+       width: 802px;
+       padding: 4px;
+       padding-top: 8px;
+       padding-bottom: 8px;
+       background-color:#000000;
+       color:#ffffff;
+       clear:both;/*no habra ningun elemento al lado de footer. deshabilita la propiedad float a su alrededor*/
+     }
+
+footer table, footer table td /*desactiva borde de tablas*/
+	{
+       border: 0px;
+    }
+
+footer a /*vinculos dentro de la etiqueta footer desactivados*/
+	{
+	  text-decoration:none;
+	  color: #ffffff;
+    }
+    
+article footer
+	{
+		background-color:#512504;
+		color:#ffffff;
+		width: 542px;
+		padding: 4px;	
+	}
+	
+section.interior/*Estilo que modifica la class interior definida en seccion dentro de noticias.html*/
+	{
+		width: 800px;
+		float:left;
+	}
+
+section.interior article/*Estilo que modifica los articulos dentro de class interior definida en seccion dentro de noticias.html*/
+	{
+		width: 800px;
+		float:left;
+		border: 1px solid #984a0b;
+		margin-bottom: 4px;
+		margin-top: 4px;
+		background-color:#f0d4b0;
+		padding : 4px;
+	}
+
+.imagen-noticias/*creamos la class imagen. esta sirve para modificar todas las demas imagenes*/
+	{
+		width: 600px;
+		margin: 10px;
+		border: 1px solid #984a0b;
+		padding: 4px;
+	}
+	
+section.interior article table tbody tr td, section.interior article table tbody tr th, section.interior article table thead tr td, section.interior article table thead tr th, section.interior article table tfoot tr td, section.interior article table tfoot tr th
+	{
+		border: 1px solid #984a0b;/*Creando y modificando celdas a la parte de la tabla que nos interesa que se vea de cierta manera*/
+	}
+	
+section.interior article table tbody tr td.fondoblanco /*asignando un fondo blanco a las celdas que nos interesan en noticias.html*/
+	{
+		border: 1px solid #984a0b;
+		background: #ffffff;
+	}
+/* inicio del menu */
+
+nav ul /*estilo de etiqueta del menu a nivel "ul"*/
+	{ 
+        list-style: none; /*se elimina el estilo en forma lista*/ 
+        text-align: center;/*se centra el texto del menu*/ 
+        padding:0; 
+	}
+	
+nav ul li/*estilo de etiqueta del menu a nivel "li" cada elemento de la lista */
+	{ 
+		display: block;/*propiedad dsplay en modo bloque establece cajita para cada elemento*/
+		float: left;/*agrupa todos los elementos de la lista a la izquierda*/
+		padding: 6px 10px;
+		margin-bottom: 4px;
+		margin-top: 4px;
+		margin-right: 8px;
+		border-top: 1px solid #984a0b;
+		border-bottom: 3px solid #984a0b;
+	}
+	
+nav ul li a /*estilo de etiqueta del menu a nivel "a" que modifica el estilo de los hipervinculos*/
+	{ 
+		text-decoration: none;/*elimina decoracion del vinculo*/
+		font-family: Arial;
+		font-weight: bold;
+		text-transform: uppercase;/*transforma en mayusculas todo el texto de la lista*/
+		color: #984a0b;
+		padding: 4px;
+	}
+nav ul li:hover, nav ul li a:hover/*pseudoclase que hace que se produzca un efecto al pasar el raton por cada elemento*/
+	{
+		color: #f0d4b0;
+		background: #984a0b;
+	}
+	
+/* fin del menu */
+
+h1  { 	font-size: 1.4em }/*Estilo que define el tamaño de la letra en "veces" siendo veces basado en tamaño de la letra --> M <--*/
+h2  { 	font-size: 1.2em }
+
+figcaption /*estilo que modifica comentarios bajo imagen */
+	{
+		font-size: 0.8em;
+		font-style: italic;
+		color: #984a0b;
+	}   
+/* Estilos ID para bloque# en productos.html */
+
+#bloque1 
+	{
+		width: 358px; /*asignacion de ancho total de los bloques en pixeles en una caja*/
+		border: 1px solid #984a0b;/*Propiedad Shorland que añade bordes al parrafo sin especificar posicion*/
+		margin: 10px; /*Propiedad shortland que añade margen de 10 pixels al parrafo sin especificar posicion*/
+		padding: 10px;/*Propiedad shortland que define la distancia de la letra al borde*/	
+		float: left;/*Propiedad de CSS que permite posicionar una caja de forma flotante, pueden ser right y none. esta ultima anula la propiedad flotante y la devuelve a su forma original*/	
+	}	
+	
+#bloque2 
+	{
+		width: 358px;
+		border-top: 1px solid #984a0b;/*Las propiedades shortland establece simultaneamente el valor de varias propiedades simultaneamente*/
+        border-right: 1px solid #984a0b;/*tambien se puede modificar añadiendo la propiedad shortland y especificando posicion si arriba, abajo, derecha, o izquierda*/
+        border-bottom: 1px solid #984a0b;
+        border-left: 1px solid #984a0b;
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        margin-left: 10px; 
+		padding-top: 10px;
+		padding-right: 10px;
+		padding-bottom: 10px;
+		padding-left: 10px;
+		float: left;
+	}

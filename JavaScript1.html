@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Pruebas javaScript</title>
+		<!-- Siempre insertar los scripts en la cabecera y usar METODOS JavaScript para referenciar elementos a utilizar -->
+			<script>
+				//funcion que abre una ventana y muestra un texto
+				function mostraralerta() //creando una funcion que no recibe ningun parametro
+					{
+						alert('Hiciste click!');//codigo de la funcion. instruccion que muestra un cuadro con un texto
+					}
+				//funcion que al recibir un clic en el objeto llama a la función "mostraralerta"
+				function hacerclick() //creando otra funcion que no recibe ningun parametro
+					{
+						document.getElementsByTagName('p')[0].onclick=mostraralerta; //instruccion que selecciona guarda en un array todos los TAGs <p> de una pagina y seleccion aprimer elemento "<p>[0]" del objeto "document"	
+					} //en el objeto "document" llama elementos basado en un TAG (en este caso <p>). Cuando esto ocurre se ejecuta la funcion mostraralerta
+				window.onload=hacerclick;//event handler que, al cargar (onload) la web, llama a la función "hacerclick". 
+			</script>
+	</head>
+	<body>
+		<div id="principal"> <p>Haga Click</p> </div>
+	</body>
+</html>

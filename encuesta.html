@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang ="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Pruebas JavaScript</title>
+		<script>
+			function calculocolor()//Creando la funcion
+				{
+				var color = ""; //variable que almacena el color introducido en cada momento
+			    var intentos = 0; //variable contador para gestionar numero de colores
+			    var valores = new Array();//La instruccion "NEW + (tipo de variable)" crea variables tipo arrays, como este, que almacena todos los elementos introducidos anteriormente en la variable "color"
+			    var valores_conjunto = "";//variable referente a la cadena de texto que se mostrara todos los valores que ha almacenado la variable array "VALORES" 
+					
+			    	while (color != "rojo")//condicion de salida del bucle "while"
+						{
+							color = prompt("Introduzca un color (ROJO PARA SALIR). Nº de intentos "+intentos,"");
+							valores[intentos]=color//Aqui se esta asignando a cada indice del array "VALORES" cada color introducido en la variable "COLOR"
+							intentos++//La variable contador "INTENTOS" se incrementa en 1. Esta recorriendo las posiciones del array "vALORES"
+						}
+			    										  //Mi error sintactico de dislexico era = "(i=0;i<valores."LENGTH";i++)"
+			    			for (i=0;i<valores.lenght;i++)//Se usa ";" para separar en el bucle "for" sus elementos "(valor inicial;condiciones;incremento)"
+			    				{						  //Este bucle se activa cuando se cumple la condicion de salida del bucle "while", osea, cuando ha introducido (ROJO) en el bucle while
+			    					valores_conjunto=valores_conjunto+" "+valores[i];//Guardando en ("variable_conjunto") una concatenancion de todos los elementos del array "VALORES", separados por un espacio en blanco	
+			    				}
+			    			alert("Los valores introducidos son "+valores_conjunto); //El bucle "for" se crea para mostrar el resultado de todos los valores introducidos por el usuario en una ventada de alerta 
+				}
+			calculocolor()//llamando a la funcion creada
+			alert("Gracias por usar nuestra aplicacion")//mensaje en pantalla
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

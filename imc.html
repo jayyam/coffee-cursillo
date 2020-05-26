@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Calculo IMC</title>
+		<script>
+			//solicitud de datos al usuario
+		
+			var sexo = prompt("Indique sexo (h-hombre o m-mujer):", "");//Esto es una variable global ya que no esta dentro de ninguna funcion pero si entre <script>
+			var altura = parseInt(prompt("Indique altura en cm.:", ""));//parseInt convierte un valor tipo cadena (string) en un valor tipo entero (Int)
+			var peso = parseInt(prompt("Indique peso en kg.:", ""));
+			
+			//llamada a las funciones creadas
+			
+		    var resultado = calcular_imc(sexo, altura, peso);//asigna el valor de la funcion "calcular-imc" a la variable resultado
+		    imprimirResultado(sexo, altura, peso, resultado);//llamando a funcion imprimir resultado
+		
+				// función calcular índice de masa corporal
+				
+				function calcular_imc(sexo, altura, peso)
+					{
+	        			altura = Math.round(altura)/100 //Math.round(#)/100 convierte los "cm" pedidos en la variable altura a "m"
+						peso = Math.round(peso) //Math.round(#) devuelve el valor de un numero redondeado al entero mas cercano
+						var indice = (peso/Math.pow(altura,2)) //OPERACION. ademas Math.pow(var,#) eleva la variable a la potencia (#) especificada
+						var resultado =""//var nombre="" crea una variable y le asigna un valor "vacio". Esta es variable local ya que esta dentro de una funcion.				
+					
+				
+						//mediante la sentencia switch comprobamos el sexo, si es "m" se harán unas acciones y si es "h" se harán otras acciones diferentes
+        		
+        		
+						switch (sexo)
+							{
+								case "m": //ejecutara instrucciones a mujer
+						
+									if (indice < 20)
+									{
+					    					resultado = "Peso inferior al normal"
+									}
+									else if (indice>=20 && indice<24)//el operador && indica "ademas" o "Y"
+									{
+											resultado="Peso Normal"
+									}
+									else if (indice>=24 && indice<29)
+									{
+											resultado = "Peso superior al normal"
+									}
+									else
+									{
+											resultado = "Obesidad"
+									}
+												
+								break
+        			
+								case "h": //ejecutara instrucciones a hombre
+							
+									if (indice < 21)
+									{
+				    					resultado = "Peso inferior al normal"
+									}
+									else if (indice>=21 && indice<25) //el operador && indica "ademas" o "Y"
+									{
+										resultado="Peso Normal"
+									}
+									else if (indice>=25 && indice<30)
+									{
+										resultado = "Peso superior al normal"
+									}
+									else
+									{
+										resultado = "Obesidad"
+									}
+								break
+							}
+						return "Su IMC es "+indice.toFixed(2) + " y su clasificacion es "+resultado //El metodo .toFixed(#) convierte un numero en una cadena de texto con "#" decimales
+					}
+				
+				//función para imprimir el resultado, recibe unos parametros y genera una salida por pantalla
+
+				function imprimirResultado(sexo, altura, peso, indice)
+					{
+						var mensajeFinal = "Usted mide "+ altura/100 + " metros y pesa " + peso + " Kg. " + indice 
+						alert(mensajeFinal);
+					}		
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

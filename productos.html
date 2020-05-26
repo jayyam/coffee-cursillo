@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+   		<meta name="description" content="Tipos de Café producidos en Cafes Eusebio">
+   		<meta name="keywords" content="Café ecológico, Cafes Eusebio, cafe en Murcia">  
+   		<title>Tipos de Cafes - Cafés Eusebio -</title>
+   		<link rel="stylesheet" type="text/css" href="styles/estilos.css">
+	</head>	
+	<body>
+		<header>
+    	</header>
+    	<nav>
+    		<ul> <!-- crea una lista, para que sea una lista ordenada se usa <ol> -->
+        		<li><a href="index.html"Alt="Cafés Eusebio" Title="Cafés Eusebio">Inicio</a></li> <!-- define un elemento en la lista -->
+        		<li><a href="productos.html"Alt="Productos" Title="Productos">Productos</a></li>
+        		<li><a href="fichaproducto.html" Alt="Ficha del Producto" Title="Ficha del Producto">Ficha</a></li>
+        		<li><a href="noticias.html" Alt="Noticias" Title="Noticias">Noticias</a></li>
+        		<li><a href="origen.html" Alt="Origen" Title="Origen">Origen</a></li>
+        		<li><a href="galeria.html" Alt="Galería" Title="Galería">Galeria</a></li>
+        		<li><a href="#">Contacto</a></li>
+      		</ul>
+    	</nav>
+    	<section class="interior">
+      		<article> 
+      			<figure>
+          			<img src="imagenes/cafe-800.jpg" Alt="Cafés Eusebio" Title="Cafés Eusebio" width="800px"> <!-- alt es un atributo reconocido por google para catalogar -->
+        		</figure> 
+        		<table width="800px">  <!-- tabla de grosor 1 en borde y ancho en pixels de la tabla -->
+        			<tr>
+	    				<th colspan="5" align=center> Tipos de Café para degustar </td> <!-- Fila de titulo de tabla y Atributo que combina las 5 celdas de la primera fila -->
+          			</tr> 
+        	   	<!-- <tr> Esta fila y sus celdas se eliminan al combinarse arriba con coldspan
+	    				<td> Tipos de Café para degustar </td>
+            			<td> # </td>
+            			<td> # </td>
+            			<td> # </td>
+            			<td> # </td>
+	  				</tr> -->
+        			<tr> <!-- Etiqueta de insercion de fila -->
+            			<th> Tipo </th> <!-- etiqueta de insercion de celdas que indica que su contenido es cabecera  -->
+	    				<th> Característica </th>
+	    				<th> Imagen </th>
+	    				<th> Precio </th>
+	    				<th> Sabor </th>
+	 				 </tr>
+	 				 <tr>
+	    				<td> Café Natural</td> <!-- etiqueta de insercion de celdas normales -->
+	    				<td> Sabor suave y natural</td>
+            			<td class="fondoblanco"> <img src="imagenes/cafe_natural.jpg"> </td> <!-- atributo para añadir imagen -->
+	    				<td> 1,20 € </td>
+	    				<td rowspan="2"> Intenso </td> <!-- Atributo que colapsa el valor "intenso de 2 tablas en vertical"-->
+         			 </tr>
+	  				 <tr>
+	   					<td> Café Ecológico</td>
+	    				<td> Tratado sín productos químicos</td>
+	    				<td class="fondoblanco"> <img src="imagenes/cafe_ecologico.jpg"> </td> <!-- atributo para añadir imagen -->
+	    				<td> 1,50 € </td>
+	    				<!-- <td> Intenso </td> esta celda se elimina al haberse combinado las celdas "intenso en la fila anterior" -->
+	  				 </tr>
+        		</table>
+      		</article>
+      		<article>  		
+        		<div id="bloque1"> <p>Esta infusión es una bebida usada para estar despiertos. Se trata de un elemento fundamental de nuestra cultura y sociedad.</p></div><!-- etiqueta que convierte el texto en caja -->	   
+				<!-- <br/>  Permite un salto de linea entre dos bloques de parrafos -->
+				<!-- <hr>   etiqueta que permite separar distintos temas en una web. modificable full en css -->   
+				<div id="bloque2"><p>Prueba de ello es la  <span> gran variedad de tipos de café existentes </span> que ha derivado en la cantidad de sinónimos existentes.</p></div>
+      		</article>
+    	</section>
+    	<aside>
+    		<iframe scroll="auto" src="http://www.cafeselmagnifico.com" frameborder="0" width="400" height="300">
+	 
+	 		</iframe>	 
+    	</aside>
+		<footer>
+			<table border="1" width="800px">
+	    		<tr>
+	      			<td>
+	      				<a href="http://secondwaysl.com/index.php/contacto/privacy-policy/index.php"> 
+	      				Aviso Legal
+	      				</a> 
+	      			</td>
+	      			<td align="center"> 
+	      				<a href="aromas.html" title="Aromas en Cafés Eusebio" Target="_blank">
+	      					<img src="imagenes/amoralcafe.png"> </td>
+	      				</a>	
+	      			<td align="right">
+	      				<!-- email de la fundacion integra -->
+	      				<a href="mailto:info@f-integra.org" title="Envianos un email">
+                  			<img src="imagenes/correo.png">
+                		</a>
+                	</td>	
+	    		</tr>
+	  		</table>
+		</footer>
+	</body>
+</html>
