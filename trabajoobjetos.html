@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<script>//LOS OBJETOS TIENEN PROPIEDADES Y METODOS
+		
+			function Taxi (tipoMotor)//clase constructor Taxi (recibiendo a su vez el parametro tipoMotor) 
+				{
+		    		this.tipoMotor = tipoMotor;//("This") es la palabra clave que se refiere al objeto que se va a crear + . + propiedad tipoMotor. A LA PROPIEDAD tipoMotor se le asigna el valor del parametro recibido en la funcion ("Taxi") 
+		    		alert('Se ha creado un objeto taxi con tipo motor: ' + this.tipoMotor);//mensaje
+		    		this.getCapacidad = function () //construyendo el metodo (getCapacidad) que asigna al objeto un valor en funcion del numero de tipoMotor
+		    			{
+		    				if (tipoMotor == 'Diesel')
+		    					{ return 40;}// valor posible del metodo getCapacidad
+		    				else 
+		    					{return 35;}// valor posible del metodo getCapacidad
+		    			}
+		  		}
+			
+			function ejemploobjetos()//
+				{
+			    	var coche1 = new Taxi('Diesel');//creando objetos coche# llamando al la funcion constructor ("taxi") y usando el operador ("new")
+			    	var coche2 = new Taxi('Gasolina');//ambos tienen propiedad ("tipoMotor") y metodo ("getCapacidad") al estar dentro del constructor ("taxi")
+			    	alert ('El coche 1 tiene capacidad ' + coche1.getCapacidad() + ' litros\n');//instanciando objeto, propiedad y metodo
+			    	alert ('El coche 2 tiene capacidad ' + coche2.getCapacidad() + ' litros\n');
+				}
+		</script>
+	</head>
+	<body>
+		<div id ="pulsador" onclick="ejemploobjetos()"> Probar </div> <!-- evento "onclick" se instancia a "capa pulsador" haciendo que el objeto "ejemploobjetos" se inicialice  -->
+	</body>
+</html>

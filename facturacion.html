@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Ejemplo de objetos</title>
+		<script>
+			//Se define la clase factura
+			function factura()//clase objeto factura
+				{
+				this.imprimir = function() //creando o definiendo el metodo "imprimir"
+					{
+						alert("cliente: "+ this.cliente); //creando "cliente" que va a ser una propiedad de los objetos "factura" que se van a ir creando
+					}
+				}
+			//Instanciamos o creamos un objeto nuevo con las caracteristicas definidas en la clase objeto factura
+		    var factura1 = new factura(); //mediante la clase objeto "factura" y usando "new" hemos creado (instancia) un objeto llamado factura1. 
+			//Esta posee una propiedad llamada "factura1.cliente" y un metodo llamado "factura1.imprimir"
+		  
+    		factura1.cliente = "EscuelaIT"; //Asignando el valor "EscuelaIT" a la propiedad cliente del objeto factura1
+    		factura1.imprimir(); //Llamamos al método imprimir del objeto factura1. Los metodos se llaman siempre terminando con "();"
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>
